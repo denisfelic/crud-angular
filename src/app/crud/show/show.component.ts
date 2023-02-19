@@ -27,6 +27,10 @@ export class ShowComponent {
 
   }
 
+  complete(itemId: number | string) {
+    this.crudService.markAsCompleted(Number(itemId));
+  }
+
 
   removeTodo(itemId: number | string) {
     this.crudService.remove(Number(itemId));

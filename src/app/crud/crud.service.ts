@@ -9,6 +9,14 @@ export class CrudService {
   private listItem: Item[] = [];
   private total = 0;
 
+  markAsCompleted(itemId: number) {
+    this.listItem.
+      forEach(item => {
+        if (item.id == itemId) {
+          item.completed = true;
+        }
+      })
+  }
 
   getListItems(): Item[] {
     return this.listItem;
@@ -19,7 +27,7 @@ export class CrudService {
   }
 
 
-  get(id: number){
+  get(id: number) {
     return this.listItem.find(item => item.id === id);
   }
 

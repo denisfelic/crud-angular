@@ -4,7 +4,7 @@
 <ul>
   <span *ngIf="getItems().length < 1">List Empty</span>
   <li *ngFor="let item of getItems()">
-    - {{item.name}} - {{item.completed}}
+    - {{item.name}} - completa: {{item.completed}}
     <a [routerLink]="'/todo/' + item.id">Visualizar</a>
   </li>
 </ul>
