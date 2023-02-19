@@ -1,0 +1,10 @@
+<div>
+  <h1>List todo page</h1>
+</div>
+<ul>
+  <span *ngIf="getItems().length < 1">List Empty</span>
+  <li *ngFor="let item of getItems()">
+    - {{item.name}} - {{item.completed}}
+    <a [routerLink]="'/todo/' + item.id">Visualizar</a>
+  </li>
+</ul>

@@ -1,0 +1,15 @@
+<h1>Show todo</h1>
+
+
+<div *ngIf="todo;then showTodoTemplate else elseTemplate"></div>
+<ng-template #showTodoTemplate>
+  <h2>Todo</h2>
+  <div *ngIf="todo">
+    <h2>Name: {{todo.name}}</h2>
+    <p>Completed: {{todo.completed}}</p>
+    <button (click)="removeTodo(todo.id)">Remover</button>
+  </div>
+</ng-template>
+<ng-template #elseTemplate>
+  Oops algum erro ocorreu!
+</ng-template>

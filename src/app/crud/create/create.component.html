@@ -1,0 +1,8 @@
+<h1>Create new todo page</h1>
+<h2>Total: {{getTotal()}}</h2>
+<form (submit)="onSubmit()" [formGroup]="createTodoForm">
+  <div>
+    <input type="text" formControlName="name">
+  </div>
+  <button type="submit">Create new </button>
+</form>
